@@ -15,7 +15,7 @@ jobs:
         id: heroku
         uses: jctaveras/heroku-deploy@v1.0.0
         with:
-          email: ${{ secrets.xm14@rice.edu }}
-          api_key: ${{ secrets.68af93db-e343-4aaf-a6fc-a84e11bf0353 }}
-          app_name: ${{ secrets.deepface-app1 }}
-          dockerfile_path: C:\Users\XueyanMu\PycharmProjects\deepface-app1\heroku\Dockerfile
+          email: ${{xm14@rice.edu }}
+          api_key: ${{68af93db-e343-4aaf-a6fc-a84e11bf0353 }}
+          app_name: ${{deepface-app1 }}
+          dockerfile_path:'\heroku'
