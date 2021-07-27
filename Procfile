@@ -1,1 +1,1 @@
-web: \heroku\run_web.sh
+web: gunicorn \heroku\run_web.sh
