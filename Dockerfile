@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 WORKDIR /heroku/main
 
-RUN chmod 777 /heroku/main/run_web.sh
+RUN chmod 777 C:\Users\XueyanMu\PycharmProjects\deepface-app1\heroku\main\run_web.sh
 RUN chmod -R 777 /main
 RUN chmod -R 777 ./
 
