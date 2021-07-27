@@ -30,7 +30,7 @@ RUN mkdir -p /main
 
 # COPY ./heroku/main /main
 
-WORKDIR /main
+WORKDIR /heroku/main
 
 #COPY ./run_web.sh /run_web.sh
 RUN chmod 777 /run_web.sh
