@@ -28,7 +28,7 @@ RUN pip3 install --no-cache-dir -r /requirements.txt
 
 RUN mkdir -p /main
 
-COPY ./main /main
+COPY ./heroku/main /main
 
 WORKDIR /main
 
