@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-WORKDIR /heroku
+WORKDIR /heroku/main
 
 RUN chmod 777 /run_web.sh
 RUN chmod -R 777 /main
