@@ -29,15 +29,15 @@ RUN pip3 install --no-cache-dir -r /requirements.txt
 RUN mkdir -p /main
 
 # COPY ./heroku/main /main
-
+COPY ./run_web.sh
 WORKDIR /heroku/main
 
-#COPY ./run_web.sh /run_web.sh
-RUN chmod 777 run_web.sh
+RUN ["chmod", "777", "run_web.sh"]
+RUN chmod 777 ~/run_web.sh
 RUN chmod -R 777 /main
 RUN chmod -R 777 ./
 
 ENV PORT=80
 EXPOSE $PORT
 
-ENTRYPOINT ["/run_web.sh"]
+ENTRYPOINT ["./run_web.sh"]
