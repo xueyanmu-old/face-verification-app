@@ -26,9 +26,7 @@ FROM ubuntu:latest
 # COPY requirements.txt /requirements.txt
 # RUN pip3 install --no-cache-dir -r /requirements.txt
 # 
-# RUN mkdir -p /main
-
-
+RUN mkdir -p /main
 
 #gennaro's addition to find run_web.sh
 ADD . /heroku/main/
