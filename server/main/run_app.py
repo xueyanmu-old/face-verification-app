@@ -58,10 +58,12 @@ async def analyzer(file: bytes = File(...)):
 async def verification_route(file: List[bytes] = File(...)):
 
     image1 = Image.open(io.BytesIO(file[0]))
-    img1 = tf.keras.preprocessing.image.img_to_array(image1)
+    img1 =image1.convert('RGB')
+    img1 = tf.keras.preprocessing.image.img_to_array(img1)
 
     image2 = Image.open(io.BytesIO(file[1]))
-    img2 = tf.keras.preprocessing.image.img_to_array(image2)
+    img2 =image2.convert('RGB')
+    img2 = tf.keras.preprocessing.image.img_to_array(img2)
 
     # save to database
     instance = compare()
