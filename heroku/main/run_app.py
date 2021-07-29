@@ -4,7 +4,7 @@ from typing import List
 from fastapi import FastAPI, File, UploadFile
 from deepface import DeepFace
 from tensorflow.python.framework import ops
-import tensorflow as tf
+# import tensorflow as tf
 
 app = FastAPI()
 
@@ -28,30 +28,18 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.post("/analyze/")
-async def analyzer(file: bytes = File(...)):
-
-    image = Image.open(io.BytesIO(file))
-    img = tf.keras.preprocessing.image.img_to_array(image)
-
-    with graph.as_default():
-
-        demography = DeepFace.analyze(img, actions=["emotion"])
-    return {"file_size": len(file), "prediction": demography}
-
-
 @app.post("/verification/")
 async def verification_route(file: List[bytes] = File(...)):
 
     image1 = Image.open(io.BytesIO(file[0]))
-    img1 = tf.keras.preprocessing.image.img_to_array(image1)
+    #img1 = tf.keras.preprocessing.image.img_to_array(image1)
 
     image2 = Image.open(io.BytesIO(file[1]))
-    img2 = tf.keras.preprocessing.image.img_to_array(image2)
+    #img2 = tf.keras.preprocessing.image.img_to_array(image2)
 
     with graph.as_default():
         try:
-            result = DeepFace.verify(img1, img2, model_name="Facenet")
+            result = DeepFace.verify(image1, image2, model_name="Facenet")
         except:
             result = "L"
     return {"result": result}
