@@ -10,7 +10,7 @@ with open("main/test_image.png", "rb") as image:
 image_array = tf.keras.preprocessing.image.img_to_array(img)
 
 # demography = DeepFace.analyze(image_array, actions=["emotion"])
-demography = DeepFace.analyze(image_array, enforce_detection=False, actions=["age", "gender", "emotion"])
+demography = DeepFace.analyze(image_array, enforce_detection=False, actions=["age"])
 
 
 result = DeepFace.verify(image_array, image_array, enforce_detection=False, model_name="Facenet")
