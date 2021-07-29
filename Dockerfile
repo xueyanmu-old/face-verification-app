@@ -1,4 +1,4 @@
-FROM python:3.9-slim-stretch
+FROM python:3.9
 
 # Install OpenJDK 8
 RUN \
