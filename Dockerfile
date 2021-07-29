@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-
 # Install OpenJDK 8
 RUN \
     apt-get update && \
@@ -28,16 +27,16 @@ RUN pip3 install --no-cache-dir -r /requirements.txt
 
 RUN mkdir -p /main
 
-COPY ./main /main
-ADD . /main
+#gennaro's addition to find run_web.sh
+ADD . /heroku/main/
 
-WORKDIR /main
+WORKDIR /heroku/main
 
-RUN chmod 777 ./main/run_web.sh
-RUN chmod -R 777 /main
-RUN chmod -R 777 ./
+RUN chmod 777 ./heroku/main/run_web.sh
+RUN chmod -R 777 ./heroku/main
+#RUN chmod -R 777 ./
 
 ENV PORT=80
 EXPOSE $PORT
 
-ENTRYPOINT ["./main/run_web.sh"]
+ENTRYPOINT ["./heroku/main/run_web.sh"]

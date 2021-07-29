@@ -50,6 +50,8 @@ async def verification_route(file: List[bytes] = File(...)):
     img2 = tf.keras.preprocessing.image.img_to_array(image2)
 
     with graph.as_default():
-
-        result = DeepFace.verify(img1, img2, model_name="Facenet")
+        try:
+            result = DeepFace.verify(img1, img2, model_name="Facenet")
+        except:
+            result = "L"
     return {"result": result}
