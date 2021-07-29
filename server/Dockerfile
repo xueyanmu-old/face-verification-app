@@ -35,7 +35,7 @@ COPY ./main /main
 
 RUN python3 /main/preload.py
 
-COPY ./containers/python/run_web.sh /run_web.sh
+ADD . /containers/python/run_web.sh /run_web.sh
 RUN chmod 777 /run_web.sh
 
 # Jupyter
