@@ -4,7 +4,7 @@ services:
   web: &basePy
     build:
       context: .
-      dockerfile: ./containers/python/Dockerfile
+      dockerfile: Dockerfile
     volumes:
       - ./main:/main
     env_file:
