@@ -1,4 +1,5 @@
 FROM ubuntu:21.04
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install OpenJDK 8
 RUN \
