@@ -40,4 +40,4 @@ RUN chmod 777 ./heroku/main/run_web.sh
 ENV PORT=80
 EXPOSE $PORT
 
-ENTRYPOINT ["/run_web.sh"]
+ENTRYPOINT ["./run_web.sh"]
