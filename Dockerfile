@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+FROM python:3.9-slim-stretch
+
 # Install OpenJDK 8
 RUN \
     apt-get update && \
