@@ -40,4 +40,4 @@ RUN chmod -R 777 ./
 ENV PORT=80
 EXPOSE $PORT
 
-ENTRYPOINT ["/run_web.sh"]
+ENTRYPOINT ["./main/run_web.sh"]
