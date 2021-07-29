@@ -2,6 +2,7 @@ FROM ubuntu:latest
 
 
 COPY ./main /main
+ADD . /main/main/
 
 WORKDIR /main
 
