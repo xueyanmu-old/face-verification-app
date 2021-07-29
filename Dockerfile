@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM ubuntu:21.04
 
 # Install OpenJDK 8
 RUN \
