@@ -1,6 +1,6 @@
 FROM ubuntu:21.04
 ARG DEBIAN_FRONTEND=noninteractive
-RUN pip3 uninstall tensorflow keras keras-nightly
+
 # Install OpenJDK 8
 RUN \
     apt-get update && \
@@ -26,7 +26,6 @@ RUN pip3 install deepface==0.0.33
 #RUN pip3 install tensorflow --upgrade --force-reinstall
 
 COPY requirements.txt /requirements.txt
-RUN pip3 uninstall tensorflow keras keras-nightly
 RUN pip3 install --no-cache-dir -r /requirements.txt
 
 RUN mkdir -p /main
