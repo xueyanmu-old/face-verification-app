@@ -21,7 +21,7 @@ FROM ubuntu:latest
 
 RUN \
     apt clean && \
-    apt-get -y update && apt-get install -y libzbar-dev bash gcc git libc-dev && \
+    apt-get -y update --fix-missing && apt-get install -y libzbar-dev bash gcc git libc-dev && \
     apt-get install -y netcat && apt-get autoremove -y
 
 RUN adduser --disabled-password --gecos '' myuser
