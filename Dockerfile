@@ -23,9 +23,7 @@ RUN apt-get install -y netcat && apt-get autoremove -y
 
 RUN apt-get install -y build-essential
 RUN pip3 install deepface==0.0.33
-RUN pip3 install tensorflow-2.5.0rc3-cp39-cp39-manylinux2010_x86_64.whl
-RUN pip3 install Keras-2.4.3-py2.py3-none-any.whl
-RUN pip3 install Python 3.9.4
+RUN pip3 install tensorflow --upgrade --force-reinstall
 
 COPY requirements.txt /requirements.txt
 RUN pip3 install --no-cache-dir -r /requirements.txt
