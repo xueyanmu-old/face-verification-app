@@ -1,4 +1,5 @@
 import tensorflow as tf
+from tensorflow.keras import preprocessing
 from PIL import Image
 from io import BytesIO
 from deepface import DeepFace
