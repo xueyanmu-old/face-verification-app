@@ -5,6 +5,9 @@ uvicorn
 fastapi
 pydantic
 python-multipart
+tensorflow-2.5.0rc3-cp39-cp39-manylinux2010_x86_64.whl
+Keras-2.4.3-py2.py3-none-any.whl
+Python 3.9.4
 
 # Mongo
 # ------------------------------------------------------------------------------
