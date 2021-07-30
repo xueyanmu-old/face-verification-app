@@ -23,10 +23,12 @@ RUN apt-get install -y netcat && apt-get autoremove -y
 
 RUN apt-get install -y build-essential
 RUN pip3 install deepface==0.0.33
-#RUN pip3 install tensorflow --upgrade --force-reinstall
+
 
 COPY requirements.txt /requirements.txt
 RUN pip3 install --no-cache-dir -r /requirements.txt
+RUN pip3 uninstall keras -y
+RUN pip3 install keras==2.3.1
 
 RUN mkdir -p /main
 
