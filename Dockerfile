@@ -28,7 +28,7 @@ RUN pip3 install deepface==0.0.33
 COPY requirements.txt /requirements.txt
 RUN pip3 install --no-cache-dir -r /requirements.txt
 RUN pip3 uninstall keras -y
-RUN pip3 install keras==2.3.1
+RUN pip3 install keras==2.4.3
 
 RUN mkdir -p /main
 
