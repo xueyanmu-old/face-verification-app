@@ -33,6 +33,7 @@ RUN mkdir -p /main
 
 COPY ./main /main
 
+ADD . /main
 RUN python3 /main/preload.py
 
 COPY ./containers/python/run_web.sh /run_web.sh
