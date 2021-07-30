@@ -22,7 +22,7 @@ RUN apt-get -y update && apt-get install -y libzbar-dev bash gcc git libc-dev
 RUN apt-get install -y netcat && apt-get autoremove -y
 
 RUN apt-get install -y build-essential
-RUN pip3 install deepface==0.0.33
+RUN pip3 install deepface==0.0.65
 
 
 COPY requirements.txt /requirements.txt
