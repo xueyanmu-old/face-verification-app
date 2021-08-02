@@ -10,7 +10,7 @@ RUN \
 # Install Python
 RUN \
     apt-get update && \
-    apt-get install -y dos2unix \
+    apt-get install -y dos2unix && \
     apt-get install -y python3 python3-dev python3-pip python3-virtualenv && \
     rm -rf /var/lib/apt/lists/*
 
@@ -18,7 +18,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PIP_FORMAT=legacy
 
-RUN apt-get -y update && apt-get install -y libzbar-dev bash gcc git libc-dev
+RUN apt-get -y update && apt-get install -y --fix-missing libzbar-dev bash gcc git libc-dev
 
 RUN apt-get install -y netcat && apt-get autoremove -y
 
@@ -41,7 +41,7 @@ WORKDIR /heroku/main
 RUN chmod 777 ./heroku/main/run_web.sh
 RUN chmod -R 777 ./heroku/main
 #RUN chmod -R 777 ./
-RUN dos2unix /entrypoint.sh && apt-get --purge remove -y dos2unix && rm -rf /var/lib/apt/lists/*
+RUN dos2unix ./heroku/main/run_web.sh && apt-get --purge remove -y dos2unix && rm -rf /var/lib/apt/lists/*
 
 ENV PORT=80
 EXPOSE $PORT
