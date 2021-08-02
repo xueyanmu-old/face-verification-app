@@ -13,3 +13,5 @@ uvicorn run_app:app --host ${HOST} --port ${PORT} --reload --ws 'auto' \
 --loop 'auto' --workers 8
 
 exec "$@"
+
+LF
