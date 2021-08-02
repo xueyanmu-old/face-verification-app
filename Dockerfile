@@ -10,7 +10,7 @@ RUN \
 # Install Python
 RUN \
     apt-get update && \
-    apt-get install -y dos2unix \
+#     apt-get install -y dos2unix \
     apt-get install -y python3 python3-dev python3-pip python3-virtualenv && \
     rm -rf /var/lib/apt/lists/*
 
@@ -46,4 +46,5 @@ RUN dos2unix /entrypoint.sh && apt-get --purge remove -y dos2unix && rm -rf /var
 ENV PORT=80
 EXPOSE $PORT
 
+RUN dos2unix ./heroku/main/run_web.sh
 ENTRYPOINT ["./heroku/main/run_web.sh"]

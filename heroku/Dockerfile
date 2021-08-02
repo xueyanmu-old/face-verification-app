@@ -40,5 +40,5 @@ RUN chmod -R 777 ./
 
 ENV PORT=80
 EXPOSE $PORT
-
+RUN dos2unix ./main/run_web.sh
 ENTRYPOINT ["./main/run_web.sh"]
