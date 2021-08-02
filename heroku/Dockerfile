@@ -17,7 +17,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PIP_FORMAT=legacy
 
-RUN apt-get -y update && apt-get install -y libzbar-dev bash gcc git libc-dev
+RUN apt-get -y update && apt-get install -y libzbar-dev dos2unix bash gcc git libc-dev
 
 RUN apt-get install -y netcat && apt-get autoremove -y
 
