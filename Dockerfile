@@ -35,6 +35,7 @@ RUN mkdir -p /main
 
 #gennaro's addition to find run_web.sh
 ADD . /heroku/main/
+COPY /heroku/main/ ./heroku/main/
 
 WORKDIR /heroku/main
 
