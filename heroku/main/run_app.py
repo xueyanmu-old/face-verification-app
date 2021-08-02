@@ -39,7 +39,7 @@ async def verification_route(file: List[bytes] = File(...)):
 
     with graph.as_default():
         try:
-            result = DeepFace.verify(image1, image2, model_name="Facenet")
+            result = DeepFace.verify(image1, image2, model_name="Facenet", enforce_detection=False)
         except:
             result = "L"
     return {"result": result}

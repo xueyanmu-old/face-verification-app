@@ -12,5 +12,5 @@ image_array = tf.keras.preprocessing.image.img_to_array(img)
 
 demography = DeepFace.analyze(image_array, actions=["emotion"])
 
-result = DeepFace.verify(image_array, image_array, model_name="Facenet")
+result = DeepFace.verify(image_array, image_array, model_name="Facenet", enforce_detection=False)
 print("Is verified: ", result["verified"])
