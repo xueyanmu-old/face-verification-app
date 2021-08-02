@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 from deepface import DeepFace
 
-with open("image.jpeg", "rb") as image:
+with open("/heroku/image.jpeg", "rb") as image:
     f = image.read()
     b = bytearray(f)
     img = Image.open(BytesIO(b))
