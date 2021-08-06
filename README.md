@@ -1,7 +1,11 @@
-# deep-face-api
+# deep-face-api overview
 Full stack data-science project
 includes docker container for a face verification (and emotion, age, race)
 model, and instructions for how to deploy on heroku
+
+the heroku branch will help compose the heroku aspect of the project //
+the master branch is the part that contains the entire DS model 
+dockerfile may require additional command "--fix-missing" in the installs
 
 ## Medium
 Story about building the web application and deploying it.
