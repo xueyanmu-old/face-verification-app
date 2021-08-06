@@ -2,14 +2,14 @@ from PIL import Image
 from deepface import DeepFace
 import tensorflow as tf
 
-image1 = Image.open('gid140.png')
+image1 = Image.open('ay1.png')
 img1 = image1.convert('RGB')
-rgb1 = img1.save("rbg1.jpg")
+rgb1 = img1.save("ayrbg1.jpg")
 img1 = tf.keras.preprocessing.image.img_to_array(img1)
 
-image2 = Image.open('Gface.jpg')
+image2 = Image.open('ay2.png')
 img2 = image2.convert('RGB')
-rgb2 = img2.save("rbg2.jpg")
+rgb2 = img2.save("ayrbg2.jpg")
 img2 = tf.keras.preprocessing.image.img_to_array(img2)
 #
 # # save to database
