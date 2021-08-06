@@ -4,7 +4,8 @@ includes docker container for a face verification (and emotion, age, race)
 model, and instructions for how to deploy on heroku
 
 the heroku branch will help compose the heroku aspect of the project //
-the master branch is the part that contains the entire DS model 
+the master branch is the part that contains the entire DS model, as well as an android app
+    that i did not test (my android app is in a different project altogether)
 dockerfile may require additional command "--fix-missing" in the installs
 
 ## Medium
