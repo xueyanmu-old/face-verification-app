@@ -2,6 +2,8 @@ from PIL import Image
 from deepface import DeepFace
 import tensorflow as tf
 
+#todo: crop face first for best results!
+
 image1 = Image.open('ay1.png')
 img1 = image1.convert('RGB')
 rgb1 = img1.save("ayrbg1.jpg")
@@ -23,3 +25,6 @@ result = DeepFace.verify(img1, img2, model_name="Facenet", enforce_detection=Fal
 # except:
 #     result = "L"
 print({"result": result})
+
+
+
