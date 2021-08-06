@@ -3,10 +3,10 @@ Full stack data-science project
 includes docker container for a face verification (and emotion, age, race)
 model, and instructions for how to deploy on heroku
 
-the heroku branch will help compose the heroku aspect of the project //
-the master branch is the part that contains the entire DS model, as well as an android app
-    that i did not test (my android app is in a different project altogether)
-dockerfile may require additional command "--fix-missing" in the installs
+- the heroku branch will help compose the heroku aspect of the project
+- the master branch is the part that contains the entire DS model, as well as an android app
+    that i did not test (my working android app is in a different project altogether)
+- dockerfile may require additional command "--fix-missing" in the installs
 
 ## Medium
 Story about building the web application and deploying it.
@@ -23,13 +23,13 @@ Story about building the web application and deploying it.
 2. if fails, find another web server deployer for this project (AWS, etc)
 
 ## helpful advice
--all dockerfiles should be configured correctly, so dont change them yet
--folders may have redundant files, but they work currently- key is to find which 
+- all dockerfiles should be configured correctly, so dont change them yet
+- folders may have redundant files, but they work currently- key is to find which 
      exact files are causing the error (might happen in a different directory than expected)
--use to_RGB for all photos, and enforce-detection=False in each Deepface model call
--autocrlf error requires notepad++ installation, and then replace all \r\n with \n in repo
+- use to_RGB for all photos, and enforce-detection=False in each Deepface model call
+- autocrlf error requires notepad++ installation, and then replace all \r\n with \n in repo
 
 
-The below things are dumb as fuck but they kind of work
+The below things only kind of work- require lots of setup and debugging
 ### [part1](https://medium.com/@sdamoosavi/deploy-deepface-model-fastapi-develop-2e33374db6f2)
 ### [part2](https://medium.com/@sdamoosavi/deploy-deepface-model-fastapi-heroku-deployment-8e007e72c455)
